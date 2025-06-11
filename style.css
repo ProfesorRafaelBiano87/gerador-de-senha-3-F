@@ -101,3 +101,14 @@ body::before {
     color: var(--cor-neon-azul);
     font-size: 1.5em;
     margin-top: 30px
+
+.site-footer {
+    width: 100%; 
+    padding: 20px 0; 
+    background-color: #2c3e50; 
+    color: #b0b0b0; 
+    text-align: center; 
+    font-size: 0.9em; 
+    border-top: 1px solid #34495e; 
+    margin-top: auto; 
+}
