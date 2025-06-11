@@ -1,0 +1,103 @@
+/* Variáveis de Cores (Adicione no topo do seu style.css) */
+:root {
+    --cor-fundo-principal: #1A1A2E; /* Azul escuro quase preto */
+    --cor-fundo-secundario: #0F3460; /* Azul médio */
+    --cor-neon-azul: #00ADB5; /* Ciano/Azul elétrico */
+    --cor-neon-roxo: #FF2E63; /* Rosa/Roxo neon */
+    --cor-texto-claro: #EAEAEA; /* Branco levemente acinzentado */
+    --cor-texto-secundario: #A9A9A9; /* Cinza claro */
+    --cor-borda-neon: #4CAF50; /* Verde neon para força da senha */
+}
+
+body {
+    background-color: var(--cor-fundo-principal); /* Fundo escuro */
+    font-family: 'Share Tech Mono', monospace; /* Exemplo de fonte futurista (você precisaria importar do Google Fonts) */
+    color: var(--cor-texto-claro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupa a altura total da tela */
+    margin: 0;
+    overflow: hidden; /* Evita barras de rolagem desnecessárias */
+    position: relative; /* Para possíveis efeitos de fundo */
+}
+
+/* Efeito de grade no fundo (opcional, adicione ao body ou a um pseudo-elemento) */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(to right, rgba(0,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0,255,255,0.05) 1px, transparent 1px);
+    background-size: 25px 25px; /* Tamanho da célula da grade */
+    opacity: 0.2; /* Transparência da grade */
+    z-index: -1;
+}
+
+.conteudo {
+    background: rgba(15, 52, 96, 0.4); /* Fundo com transparência (efeito "vidro") */
+    backdrop-filter: blur(8px); /* Efeito de desfoque por trás */
+    border: 1px solid rgba(0, 173, 181, 0.3); /* Borda sutil de neon */
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 0 30px rgba(0, 173, 181, 0.6); /* Sombra externa com brilho */
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    overflow: hidden;
+}
+
+.conteudo-titulo img {
+    width: 60px;
+    filter: drop-shadow(0 0 10px var(--cor-neon-roxo)); /* Brilho no ícone */
+}
+
+.titulo-principal {
+    color: var(--cor-neon-azul);
+    font-size: 2.2em;
+    margin-bottom: 5px;
+    text-shadow: 0 0 10px var(--cor-neon-azul); /* Brilho no texto */
+}
+
+.titulo-secundario {
+    color: var(--cor-texto-secundario);
+    font-size: 0.9em;
+    margin-top: 0;
+}
+
+.conteudo-senha label {
+    display: block;
+    font-size: 0.9em;
+    margin-bottom: 8px;
+    color: var(--cor-texto-claro);
+    text-align: left;
+}
+
+#campo-senha {
+    background-color: rgba(26, 26, 46, 0.7); /* Fundo do input mais escuro e transparente */
+    border: 1px solid var(--cor-neon-roxo); /* Borda roxa neon */
+    border-radius: 8px;
+    color: var(--cor-neon-azul); /* Cor do texto da senha */
+    font-size: 1.5em;
+    padding: 15px 20px;
+    width: calc(100% - 40px); /* Ajuste para o padding */
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255, 46, 99, 0.4); /* Sombra interna/externa roxa */
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+#campo-senha:focus {
+    outline: none;
+    border-color: var(--cor-neon-azul); /* Borda azul ao focar */
+    box-shadow: 0 0 20px rgba(0, 173, 181, 0.8); /* Brilho maior ao focar */
+}
+
+.parametro-titulo {
+    color: var(--cor-neon-azul);
+    font-size: 1.5em;
+    margin-top: 30px
